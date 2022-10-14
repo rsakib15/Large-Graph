@@ -1,0 +1,63 @@
+{
+  "name": "@idg/large-graph-exploration",
+  "version": "0.0.5",
+  "scripts": {
+    "serve": "idg-webpack serve --mock",
+    "build": "idg-webpack build --target=app",
+    "pack": "idg-webpack build --target=service",
+    "commit": "git add . && git-cz",
+    "changelog": "node ./scripts/changelog.js"
+  },
+  "module": "es/index.js",
+  "dependencies": {},
+  "main": "dist/main.common.js",
+  "typings": "types",
+  "files": [
+    "es",
+    "types"
+  ],
+  "devDependencies": {
+    "@antv/g6": "^4.7.0",
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
+    "@idg/fastclick": "^0.1.1",
+    "@idg/idg": "^2.12.36",
+    "@idg/iview": "^4.7.31",
+    "@idg/webpack": "^0.0.127",
+    "@sentry/tracing": "^6.2.0",
+    "@sentry/vue": "^6.2.5",
+    "axios": "^0.19.0",
+    "babel-core": "7.0.0-bridge.0",
+    "chalk": "^3.0.0",
+    "commitizen": "^4.1.2",
+    "conventional-changelog": "^3.1.21",
+    "cz-customizable": "^6.2.0",
+    "husky": "^4.2.5",
+    "insert-css": "^2.0.0",
+    "localforage": "^1.9.0",
+    "lodash": "^4.17.15",
+    "nyc": "^14.1.1",
+    "register-service-worker": "^1.6.2",
+    "svg-loader": "^0.0.2",
+    "tempfile": "^3.0.0",
+    "typescript-tslint-plugin": "^0.5.5",
+    "vue": "^2.6.10",
+    "vue-class-component": "^7.1.0",
+    "vue-i18n": "^8.12.0",
+    "vue-property-decorator": "^8.2.1",
+    "vue-router": "^3.5.1",
+    "vue-template-compiler": "^2.6.10",
+    "vuex": "^3.1.1"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-customizable"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "license": "MIT"
+}
